@@ -16,15 +16,6 @@ app.use(express.static("public"));
 
 //ROUTES//
 
-// ----------------------------------------------
-const PORT = process.env.PORT || 4000;
-app.listen(PORT,"0.0.0.0", () => console.log(`Server running on port ${PORT}`));
-
-app.use("/", (req, res) => {
-  res.send("Welcome To The WOSAM Backend");
-});
-// ----------------------------------------------
-
 // This is responsible for multer system that allows for file uploading
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -795,3 +786,13 @@ app.delete(
     });
   }
 );
+
+
+// ----------------------------------------------
+const PORT = process.env.PORT || 4000;
+app.listen(PORT,"0.0.0.0", () => console.log(`Server running on port ${PORT}`));
+
+app.use("/", (req, res) => {
+  res.send("Welcome To The WOSAM Backend");
+});
+// ----------------------------------------------
