@@ -21,3 +21,12 @@ pool.query("SELECT NOW()", (err, res) => {
     console.log("Connected to the database");
   }
 });
+
+// Test to check if retrieves data from database
+pool.query("SELECT * FROM authorized_users", (err, res) => {
+  if (err) {
+    console.error("Error connecting to the database", err);
+  } else {
+    console.log(res);
+  }
+});
