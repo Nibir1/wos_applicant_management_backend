@@ -20,6 +20,10 @@ app.use(express.static("public"));
 app.listen(5000, () => {
   console.log("server has started on port 5000");
 });
+
+app.use("/", (req, res) => {
+  res.send("Welcome To The WOSAM Backend");
+});
 // ----------------------------------------------
 
 // This is responsible for multer system that allows for file uploading
