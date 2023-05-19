@@ -17,9 +17,8 @@ app.use(express.static("public"));
 //ROUTES//
 
 // ----------------------------------------------
-app.listen(5000, "0.0.0.0", () => {
-  console.log("server has started on 5000");
-});
+const PORT = process.env.PORT || 4000;
+app.listen(PORT,"0.0.0.0", () => console.log(`Server running on port ${PORT}`));
 
 app.use("/", (req, res) => {
   res.send("Welcome To The WOSAM Backend");
