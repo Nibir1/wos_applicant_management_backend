@@ -17,8 +17,8 @@ app.use(express.static("public"));
 //ROUTES//
 
 // ----------------------------------------------
-app.listen(7138, () => {
-  console.log("server has started on port 5000");
+app.listen(3000,"0.0.0.0", () => {
+  console.log("server has started on port 3000");
 });
 
 app.use("/", (req, res) => {
