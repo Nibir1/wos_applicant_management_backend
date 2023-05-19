@@ -111,6 +111,7 @@ app.get("/get_user_infos", async (req, res) => {
   try {
     const user_infos = await pool.query("SELECT * FROM authorized_users");
     res.json(user_infos.rows);
+    console.log(res.json(user_infos.rows));
   } catch (err) {
     console.error(err.message);
   }
