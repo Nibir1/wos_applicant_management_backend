@@ -6,8 +6,6 @@ const pool = require("./db");
 const multer = require("multer");
 const path = require("path");
 
-// const dotenv = require("dotenv");
-// dotenv.config();
 
 //middleware
 app.use(cors());
@@ -24,11 +22,7 @@ const storage = multer.diskStorage({
   filename: function (req, file, cb) {
     cb(
       null,
-      file.fieldname +
-        "_" +
-        file.filename +
-        Date.now() +
-        path.extname(file.originalname)
+      file.fieldname + "_" + Date.now() + path.extname(file.originalname)
     );
   },
 });
