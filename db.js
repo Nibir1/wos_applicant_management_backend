@@ -1,4 +1,6 @@
 const Pool = require("pg").Pool;
+const dotenv = require("dotenv");
+dotenv.config();
 
 // Railway.app
 const pool = new Pool({
@@ -21,4 +23,3 @@ pool.query("SELECT NOW()", (err, res) => {
     console.log("Connected to the database");
   }
 });
-
