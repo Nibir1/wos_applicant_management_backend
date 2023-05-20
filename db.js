@@ -1,6 +1,4 @@
 const Pool = require("pg").Pool;
-const dotenv = require("dotenv");
-dotenv.config();
 
 // Railway.app
 const pool = new Pool({

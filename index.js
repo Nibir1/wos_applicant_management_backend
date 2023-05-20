@@ -6,8 +6,8 @@ const pool = require("./db");
 const multer = require("multer");
 const path = require("path");
 
-const dotenv = require("dotenv");
-dotenv.config();
+// const dotenv = require("dotenv");
+// dotenv.config();
 
 //middleware
 app.use(cors());
