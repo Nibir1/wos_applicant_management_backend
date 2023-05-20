@@ -169,7 +169,7 @@ app.delete("/delete_user/:user_email", async (req, res) => {
 
 // This api takes applicants infos and creates a new applicant into applicants table
 app.post(
-  "/insert_applicant_infos",
+  "/applicants/insert_applicant_infos",
   upload.fields([
     { applicants_name: "applicants_name" },
     { fathers_name: "fathers_name" },
